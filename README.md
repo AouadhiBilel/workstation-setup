@@ -1,2 +1,2 @@
 # workstation-setup
-me helping me setup my workstations
+Me helping me setup my workstations
