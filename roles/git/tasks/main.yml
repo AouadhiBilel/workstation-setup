@@ -1,0 +1,25 @@
+- name: Install git and git-crypy on Arch
+  become: yes
+  pacman:
+    name: 
+    - git
+    - git-crypt
+  when: ansible_distribution == "Archlinux"
+
+- name: Install git related tools on Ubuntu
+  become: yes
+  apt:
+    name: 
+    - git
+    - git-crypt
+  when: ansible_distribution == "Ubuntu"
+
+
+#To-Do add task to install diffsofancy
+# - name: Check if diff-so-fancy is installed
+#   stat:
+#     path: /usr/local/bin/diff-so-fancy
+#   register: diffsofancy
+
+#To-Do add tasks to install gcm git credential helper and configure it
+#https://github.com/GitCredentialManager/git-credential-manager/blob/main/docs/credstores.md
